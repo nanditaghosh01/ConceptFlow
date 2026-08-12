@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>CONCEPTFLOW — Don't just learn the answer. See how it works.</title>
+<meta name="description" content="CONCEPTFLOW turns number-system conversion into an interactive, step-by-step visual experience — binary, octal, decimal and hexadecimal." />
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<a href="#converter" class="visually-hidden">Skip to converter</a>
+
+<!-- ============ NAV ============ -->
+<header class="nav">
+  <div class="nav-inner">
+    <a href="#top" class="brand"><span class="brand-mark">CF</span>CONCEPTFLOW</a>
+    <nav class="nav-links">
+      <a href="#converter">Converter</a>
+      <a href="#library">Library</a>
+      <a href="#how">How it works</a>
+      <a href="#practice">Practice</a>
+      <a href="#about">About</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark or light mode">🌙</button>
+      <a href="#converter" class="btn btn-primary hide-mobile">Start Learning</a>
+    </div>
+  </div>
+</header>
+
+<!-- ============ HERO ============ -->
+<section class="hero" id="top">
+  <div class="container hero-grid">
+    <div>
+      <div class="eyebrow"><span class="dot"></span> VISUAL NUMBER SYSTEMS LAB</div>
+      <h1>Understand how <span class="accent">things work.</span></h1>
+      <p class="hero-sub">CONCEPTFLOW transforms difficult concepts into interactive visual experiences. Start with binary, octal, decimal and hexadecimal — watch every conversion happen, digit by digit.</p>
+      <div class="hero-actions">
+        <a href="#converter" class="btn btn-primary">Start Learning</a>
+        <a href="#library" class="btn btn-ghost">Explore Concepts</a>
+      </div>
+    </div>
+    <div class="hero-demo">
+      <div class="hero-demo-top">
+        <span class="hero-demo-title">Live demo</span>
+        <span class="hero-demo-badge" id="heroBadge">BIN → DEC</span>
+      </div>
+      <div id="heroStage">
+        <div class="hero-bits" id="heroBits"></div>
+        <div class="hero-expr" id="heroExpr">&nbsp;</div>
+        <div class="hero-result" id="heroResult">0</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ HOW IT WORKS ============ -->
+<section class="section" id="how">
+  <div class="container">
+    <div class="section-head" style="margin-left:auto; margin-right:auto; text-align:center;">
+      <div class="section-eyebrow">The process</div>
+      <h2>Ask. Understand. Visualize. Interact. Practice.</h2>
+      <p style="margin-left:auto; margin-right:auto;">Every concept in CONCEPTFLOW follows the same five-stage loop, so the process becomes as familiar as the answer.</p>
+    </div>
+    <div class="flow">
+      <div class="flow-step"><div class="flow-num">1</div><div class="flow-label">Ask</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="flow-num">2</div><div class="flow-label">Understand</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="flow-num">3</div><div class="flow-label">Visualize</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="flow-num">4</div><div class="flow-label">Interact</div></div>
+      <div class="flow-arrow">→</div>
+      <div class="flow-step"><div class="flow-num">5</div><div class="flow-label">Practice</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURES ============ -->
+<section class="section">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Why CONCEPTFLOW</div>
+      <h2>Built to show the process, not just the answer.</h2>
+    </div>
+    <div class="grid-3">
+      <div class="card"><div class="card-icon bg-2">👁</div><h3>Visual Explanations</h3><p>Turn abstract ideas into understandable animations, one step at a time.</p></div>
+      <div class="card"><div class="card-icon bg-10">🪜</div><h3>Step-by-Step Learning</h3><p>Break complex processes into small visual steps you control.</p></div>
+      <div class="card"><div class="card-icon bg-8">🎛</div><h3>Interactive Simulations</h3><p>Change the value and watch the entire visualization recalculate live.</p></div>
+      <div class="card"><div class="card-icon bg-16">✨</div><h3>Every Base Covered</h3><p>Binary, octal, decimal and hexadecimal — convert freely between any two.</p></div>
+      <div class="card"><div class="card-icon bg-2">🎚</div><h3>Learn at Your Level</h3><p>Ask "I don't understand" for a simpler explanation, anytime.</p></div>
+      <div class="card"><div class="card-icon bg-10">✅</div><h3>Practice Mode</h3><p>Test your understanding immediately with generated problems.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ LIBRARY ============ -->
+<section class="section" id="library">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Concept library</div>
+      <h2>Number Systems</h2>
+      <p>Pick any pair — the converter below loads it instantly with a full animated walkthrough.</p>
+    </div>
+    <div class="lib-grid" id="libGrid"></div>
+  </div>
+</section>
+
+<!-- ============ CONVERTER WORKSPACE ============ -->
+<section class="section" id="converter">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Interactive workspace</div>
+      <h2>Number System Converter</h2>
+      <p>Don't just see the answer — watch every digit, power and remainder do its job.</p>
+    </div>
+
+    <div class="workspace-shell">
+      <div class="ws-header">
+        <div class="ws-title">
+          <h3>Base Conversion</h3>
+          <span class="ws-pill" id="wsDifficulty">Beginner</span>
+        </div>
+        <div class="ws-progress-wrap">
+          <span id="wsStepLabel">Step 0 of 0</span>
+          <div class="ws-progress-bar"><div class="ws-progress-fill" id="wsProgressFill"></div></div>
+        </div>
+      </div>
+
+      <div class="ws-body">
+        <!-- LEFT: controls -->
+        <div class="ws-controls">
+          <div class="base-row">
+            <div class="field">
+              <label for="fromBase">From base</label>
+              <select class="select" id="fromBase">
+                <option value="2">2 — Binary</option>
+                <option value="8">8 — Octal</option>
+                <option value="10" selected>10 — Decimal</option>
+                <option value="16">16 — Hex</option>
+              </select>
+            </div>
+            <button class="swap-btn" id="swapBtn" aria-label="Swap from and to base" title="Swap">⇄</button>
+            <div class="field">
+              <label for="toBase">To base</label>
+              <select class="select" id="toBase">
+                <option value="2" selected>2 — Binary</option>
+                <option value="8">8 — Octal</option>
+                <option value="10">10 — Decimal</option>
+                <option value="16">16 — Hex</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="field">
+            <label for="valueInput">Value to convert</label>
+            <input class="input" id="valueInput" value="13" autocomplete="off" spellcheck="false" inputmode="text" />
+            <div class="error-msg" id="errorMsg" role="alert"></div>
+          </div>
+
+          <div class="field">
+            <label>Difficulty</label>
+            <select class="select" id="difficultySelect">
+              <option value="Beginner">Beginner — explain it like I'm new</option>
+              <option value="Intermediate">Intermediate — I know the basics</option>
+              <option value="Advanced">Advanced — technical detail</option>
+            </select>
+          </div>
+
+          <div class="nova-row">
+            <div class="nova-label"><span class="nova-avatar">✦</span> Show guide (Nova)</div>
+            <label class="switch"><input type="checkbox" id="novaToggle" checked /><span class="slider-track"></span></label>
+          </div>
+        </div>
+
+        <!-- CENTER: animation stage -->
+        <div class="ws-stage">
+          <div class="stage-inner" id="stage"></div>
+        </div>
+
+        <!-- RIGHT: explanation panel -->
+        <div class="ws-panel">
+          <div class="panel-msg" id="novaMsg">
+            <span class="nova-avatar">✦</span>
+            <div>
+              <div id="panelStepTitle">Ready when you are</div>
+              <div id="panelStepDetail">Press play, or step through manually with the timeline below.</div>
+            </div>
+          </div>
+
+          <div>
+            <div class="help-title">I don't understand</div>
+            <div class="chip-row">
+              <button class="chip" id="helpSimple">Explain more simply</button>
+              <button class="chip" id="helpAnalogy">Give me an analogy</button>
+              <button class="chip" id="helpAgain">Explain this step again</button>
+            </div>
+          </div>
+
+          <div class="tip-box" id="tipBox"></div>
+        </div>
+      </div>
+
+      <div class="ws-timeline">
+        <div class="timeline-controls">
+          <button class="ctrl-btn" id="restartBtn" aria-label="Restart" title="Restart">⟲</button>
+          <button class="ctrl-btn" id="prevBtn" aria-label="Previous step" title="Previous">◀</button>
+          <button class="ctrl-btn play" id="playBtn" aria-label="Play" title="Play / Pause">▶</button>
+          <button class="ctrl-btn" id="nextBtn" aria-label="Next step" title="Next">▶</button>
+        </div>
+        <div class="timeline-track">
+          <div class="timeline-bar" id="timelineBar"><div class="timeline-fill" id="timelineFill"></div></div>
+          <span class="timeline-count" id="timelineCount">0 / 0</span>
+        </div>
+        <div class="speed-wrap">
+          <span>Speed</span>
+          <input type="range" id="speedSlider" min="0.5" max="2.5" step="0.25" value="1" />
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PRACTICE ============ -->
+<section class="section" id="practice">
+  <div class="container">
+    <div class="section-head">
+      <div class="section-eyebrow">Try it yourself</div>
+      <h2>Practice Mode</h2>
+      <p>A fresh conversion problem, generated on demand. Work it out, then check your steps.</p>
+    </div>
+    <div class="practice-card">
+      <div>
+        <div class="practice-q">Convert the following value:</div>
+        <div class="practice-expr mono" id="practiceExpr">—</div>
+        <div class="practice-row">
+          <input class="input" id="practiceAnswer" placeholder="Your answer" autocomplete="off" spellcheck="false" style="max-width:220px;" />
+          <button class="btn btn-primary" id="practiceCheck">Check</button>
+          <button class="btn btn-ghost" id="practiceNew">New problem</button>
+        </div>
+        <div class="practice-feedback" id="practiceFeedback"></div>
+      </div>
+      <div class="practice-steps" id="practiceSteps">Solve it above — the worked steps will appear here after you check your answer.</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ ABOUT / FOOTER ============ -->
+<footer id="about">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <a href="#top" class="brand"><span class="brand-mark">CF</span>CONCEPTFLOW</a>
+        <p>"Don't just learn the answer. See how it works." Learning should be experienced, not memorized. Built by Nandita Ghosh.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Product</h4>
+          <a href="#converter">Converter</a>
+          <a href="#library">Library</a>
+          <a href="#practice">Practice</a>
+        </div>
+        <div class="footer-col">
+          <h4>Connect</h4>
+          <a href="[ADD YOUR LINKEDIN URL]" id="linkedinLink">LinkedIn</a>
+          <a href="[ADD YOUR GITHUB URL]" id="githubLink">GitHub</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2026 Nandita Ghosh. All Rights Reserved.</span>
+      <span>CONCEPTFLOW — Number Systems Lab</span>
+    </div>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
