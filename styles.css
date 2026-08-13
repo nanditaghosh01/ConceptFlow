@@ -1,11 +1,11 @@
 /* ============ TOKENS ============ */
 :root{
-  --bg:#0a0e15;
-  --bg-elev:#0f1521;
-  --surface:#141c2b;
-  --surface-2:#1a2334;
-  --border:#242f42;
-  --border-soft:#1c2536;
+  --bg:#000000;
+  --bg-elev:#0a0a0a;
+  --surface:#111111;
+  --surface-2:#181818;
+  --border:#262626;
+  --border-soft:#1a1a1a;
   --text:#e9eef5;
   --text-dim:#8fa0b8;
   --text-faint:#586a84;
