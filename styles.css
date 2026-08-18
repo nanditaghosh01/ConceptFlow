@@ -344,5 +344,4 @@ footer{border-top:1px solid var(--border-soft); padding:44px 0 30px; margin-top:
 .c-10{color:var(--base10);} .bd-10{border-color:var(--base10) !important;} .bg-10{background:color-mix(in srgb, var(--base10) 16%, transparent); color:var(--base10);}
 .c-16{color:var(--base16);} .bd-16{border-color:var(--base16) !important;} .bg-16{background:color-mix(in srgb, var(--base16) 16%, transparent); color:var(--base16);}
 .solid-2{background:var(--base2); color:#04101c;} .solid-8{background:var(--base8); color:#04101c;} .solid-10{background:var(--base10); color:#04101c;} .solid-16{background:var(--base16); color:#04101c;}
-
 .visually-hidden{position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); white-space:nowrap;}

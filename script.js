@@ -432,11 +432,9 @@ $("themeToggle").addEventListener("click", ()=>{
 novaToggle.addEventListener("change", ()=>{
   novaMsg.style.display = novaToggle.checked ? "flex" : "none";
 });
-
 /* ======================= INIT ======================= */
 fromBaseSel.value = "10"; toBaseSel.value = "2";
 runConversion();
 runHeroDemo();
 newProblem();
-
 })();
