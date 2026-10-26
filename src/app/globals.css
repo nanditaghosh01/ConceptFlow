@@ -1,0 +1,164 @@
+@import "tailwindcss";
+
+:root, [data-theme="dark"] {
+  /* Exact Blue Beige Palette (Noguchi Design) */
+  --palette-alabaster: #F9F0EE;
+  --palette-mist: #CFC7C8;
+  --palette-tan: #B39A84;
+  --palette-navy: #0A1E54;
+
+  /* Dark Theme Tokens: STRICTLY PURE BLACK CANVAS */
+  --bg-primary: #000000;
+  --bg-surface: #060e22;
+  --bg-surface-elevated: #0A1E54;
+  --bg-card: rgba(10, 30, 84, 0.72);
+  --bg-inner: rgba(0, 0, 0, 0.6);
+  --border-subtle: rgba(207, 199, 200, 0.18);
+  --border-strong: rgba(179, 154, 132, 0.38);
+  
+  --text-main: #F9F0EE;
+  --text-muted: #CFC7C8;
+  --text-faint: #B39A84;
+  --text-accent: #B39A84;
+
+  /* Button Tokens */
+  --btn-primary-bg: #B39A84;
+  --btn-primary-text: #0A1E54;
+  --btn-primary-hover: #F9F0EE;
+  --btn-secondary-bg: rgba(10, 30, 84, 0.45);
+  --btn-secondary-border: rgba(207, 199, 200, 0.25);
+  --btn-secondary-text: #F9F0EE;
+
+  /* Base System Color Mapping in Dark */
+  --base-2: #7B9DF2;   /* Navy Mist Glow */
+  --base-8: #B39A84;   /* Warm Sand Tan */
+  --base-10: #F9F0EE;  /* Warm Alabaster */
+  --base-16: #CFC7C8;  /* Mineral Mist */
+}
+
+html[data-theme="light"], [data-theme="light"] {
+  /* Light Theme Tokens: STRICTLY PURE WHITE CANVAS */
+  --bg-primary: #FFFFFF;
+  --bg-surface: #F9F0EE;
+  --bg-surface-elevated: #F9F0EE;
+  --bg-card: #F9F0EE;
+  --bg-inner: #FFFFFF;
+  --border-subtle: rgba(179, 154, 132, 0.32);
+  --border-strong: rgba(10, 30, 84, 0.25);
+
+  /* High-Contrast Rich Navy & Warm Bronze Typography for Light Mode */
+  --text-main: #0A1E54;
+  --text-muted: #3B4B72;
+  --text-faint: #6E5C4E;
+  --text-accent: #8C735E;
+
+  /* Button Tokens in Light */
+  --btn-primary-bg: #0A1E54;
+  --btn-primary-text: #F9F0EE;
+  --btn-primary-hover: #162f7a;
+  --btn-secondary-bg: #FFFFFF;
+  --btn-secondary-border: rgba(10, 30, 84, 0.3);
+  --btn-secondary-text: #0A1E54;
+
+  /* Base System Color Mapping in Light */
+  --base-2: #0A1E54;
+  --base-8: #8C735E;
+  --base-10: #0A1E54;
+  --base-16: #3B4B72;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  font-family: var(--font-inter), system-ui, -apple-system, sans-serif;
+  overflow-x: hidden;
+  transition: background-color 0.25s ease, color 0.25s ease;
+}
+
+/* Theme Adaptive Styles */
+.theme-card {
+  background-color: var(--bg-card);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+.theme-inner-box {
+  background-color: var(--bg-inner);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+.theme-badge {
+  background-color: var(--btn-secondary-bg);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+
+.theme-input {
+  background-color: var(--bg-inner);
+  border-color: var(--border-subtle);
+  color: var(--text-main);
+}
+.theme-input:focus {
+  border-color: #B39A84;
+}
+
+/* Hero Gradient Text: Adaptive for dark & light */
+.hero-gradient-text {
+  background: linear-gradient(135deg, #F9F0EE 10%, #B39A84 60%, #CFC7C8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+html[data-theme="light"] .hero-gradient-text,
+[data-theme="light"] .hero-gradient-text {
+  background: linear-gradient(135deg, #0A1E54 0%, #162F7A 50%, #8C735E 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+/* Blue Beige Glow Effects */
+.glow-navy {
+  box-shadow: 0 0 25px -5px rgba(10, 30, 84, 0.5);
+}
+.glow-tan {
+  box-shadow: 0 0 25px -5px rgba(179, 154, 132, 0.4);
+}
+.glow-mist {
+  box-shadow: 0 0 25px -5px rgba(207, 199, 200, 0.35);
+}
+
+/* Scrollbars */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(179, 154, 132, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(179, 154, 132, 0.6);
+}
+
+/* Shimmer & Pulses */
+@keyframes pulse-subtle {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.88; transform: scale(1.02); }
+}
+
+.animate-pulse-subtle {
+  animation: pulse-subtle 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes float {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-5px); }
+}
+
+.animate-float {
+  animation: float 4s ease-in-out infinite;
+}
